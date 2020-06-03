@@ -2,6 +2,17 @@
 
 The website for https://priestsheetmetal.co.nz
 
+Priest 1 died a sad death with some sort of strapi error so this is a rebuild
+
+
+
+## Built on
+
+- Strapi
+- Gatsby
+
+
+
 ## Development
 
 First
@@ -9,12 +20,18 @@ First
 ``` cd backend ```
 ``` strapi dev ```
 
+
+
 Second
 
 ``` cd frontend ```
-``` gatsby develop ```
+``` gatsby develop``` 
+
+
 
 ## Strapi Content Types
+
+this needs way more documentation
 
 ### Services
 
@@ -52,6 +69,8 @@ this needs more documentation
 # Issues
 
 - firefox ios doesnt handle the form input
+- some of the strapi API has capital letters where it would be nicer to be camelCase no underscores, hypens or whatever else
+- footer links dont fill the space
 
 ### Workarounds 
 
