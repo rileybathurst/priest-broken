@@ -11,6 +11,46 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "string"
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hasGallery": {
+      "type": "integer"
+    },
+    "coverMedium": {
+      "type": "string"
+    },
+    "coverVideo": {
+      "type": "string"
+    },
+    "hasVideo": {
+      "type": "integer"
     }
   }
 }

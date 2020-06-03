@@ -52,3 +52,7 @@ this needs more documentation
 # Issues
 
 - firefox ios doesnt handle the form input
+
+### Workarounds 
+
+- hasVideo | hasGallery etc I was having problems with booleans so I used numbers with 0 and 1 instead

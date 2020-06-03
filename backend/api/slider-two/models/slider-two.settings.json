@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_twos",
+  "info": {
+    "name": "SliderTwo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "nextimage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

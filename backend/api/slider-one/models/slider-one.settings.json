@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_ones",
+  "info": {
+    "name": "SliderOne"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sliderimage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
