@@ -51,6 +51,10 @@
     },
     "hasVideo": {
       "type": "integer"
+    },
+    "videos": {
+      "via": "service",
+      "collection": "videos"
     }
   }
 }

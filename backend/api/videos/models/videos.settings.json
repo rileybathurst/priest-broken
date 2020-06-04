@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "name": "videos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "vimeo": {
+      "type": "string"
+    },
+    "service": {
+      "model": "services",
+      "via": "videos"
+    }
+  }
+}

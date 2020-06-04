@@ -44,6 +44,10 @@ this needs way more documentation
 - gallery
 - videos
 
+
+
+### Meta 
+
 https://www.gatsbyjs.org/docs/add-page-metadata/
 
 ### Gatsby Clean
@@ -68,10 +72,19 @@ this needs more documentation
 
 # Issues
 
+- when coming from a service where I dont have video it shows as null which breaks things as opposed to being empty [] which is fine
 - firefox ios doesnt handle the form input
 - some of the strapi API has capital letters where it would be nicer to be camelCase no underscores, hypens or whatever else
 - footer links dont fill the space
+- on develop or build of Gatsby ERROR (node:9401) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
 
 ### Workarounds 
 
-- hasVideo | hasGallery etc I was having problems with booleans so I used numbers with 0 and 1 instead
+- hasVideo | hasGallery etc I was having problems with booleans so I used numbers with 0 and 1 instead - test some booleans on a new build and implement them where I can
+- The Uploads are not coming across properly manually copy the uploads dir from /backend/public/uploads/ to /frontend/public/uploads this also has to happen on upload where the directory is moved to .com/uploads this all needs to be done better but for right now i'll get through
+
+
+
+## To Do
+
+- Other services link at the bottom of each service page
