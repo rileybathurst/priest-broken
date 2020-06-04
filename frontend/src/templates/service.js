@@ -118,7 +118,7 @@ const ArticleTemplate = ({ data }) => (
           padding: '1rem'
       }}>
 
-        <Cover medium={data.strapiService.coverMedium} video={data.strapiService.CoverVideo} photo={data.strapiService.Cover.childImageSharp.fluid} />
+        <Cover medium={data.strapiService.coverMedium} video={data.strapiService.coverVideo} photo={data.strapiService.Cover.childImageSharp.fluid} />
         {/* https://help.vimeo.com/hc/en-us/articles/115011183028-Embedding-background-videos */}
 
         <hr className="swiss" />
@@ -137,7 +137,9 @@ const ArticleTemplate = ({ data }) => (
 
 
         {data.strapiService.videos.map(vids => <>
+        one
           <Sec hasVideo={data.strapiService.hasVideo} />
+        two
 
           <div className="wp-block-media-text">
             <figure className="wp-block-media-text__media">
@@ -200,6 +202,8 @@ export const query = graphql`
           }
         }
       }
+      coverVideo
+      hasVideo
       videos {
         title
         content

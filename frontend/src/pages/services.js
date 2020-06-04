@@ -53,7 +53,12 @@ export default ServicesPage
 
 export const pageQuery = graphql`  
   query ServicesQuery {
-    allStrapiService {
+    allStrapiService (
+      sort: {
+        fields: [order]
+        order: ASC
+      } 
+    ) {
       edges {
         node {
           id

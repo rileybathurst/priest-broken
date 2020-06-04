@@ -149,7 +149,12 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allStrapiService {
+    allStrapiService (
+      sort: {
+        fields: [order]
+        order: ASC
+      } 
+    ) {
       edges {
         node {
           id
