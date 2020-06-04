@@ -19,8 +19,8 @@
       "type": "string"
     },
     "service": {
-      "model": "services",
-      "via": "videos"
+      "via": "videos",
+      "model": "services"
     }
   }
 }

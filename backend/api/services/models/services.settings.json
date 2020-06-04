@@ -53,8 +53,11 @@
       "type": "integer"
     },
     "videos": {
-      "via": "service",
-      "collection": "videos"
+      "collection": "videos",
+      "via": "service"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

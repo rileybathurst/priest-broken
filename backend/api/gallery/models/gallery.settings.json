@@ -20,8 +20,8 @@
       "plugin": "upload",
       "required": false
     },
-    "service": {
-      "model": "services"
+    "alt": {
+      "type": "string"
     }
   }
 }

@@ -16,7 +16,7 @@ more details are defintley possible through the visual interface
 
 I dont understand much about which relations cause things to be null vs which are empty - this is probably why I was having problems with booleans but that seems like the most likely to always have a spot
 
-` strapi generate:api services title:text content:text cover:media slug:text gallery:media hasGallery:number coverMedium:text coverVideo:text hasVideo:number video:relation`
+` strapi generate:api services title:text content:text cover:media slug:text gallery:media hasGallery:number coverMedium:text coverVideo:text hasVideo:number video:relation order:number` 
 
 `strapi generate:api sliderOne title:text sliderOneImage:media`
 
@@ -28,13 +28,9 @@ these videos need a few pieces of additional info so even tho they always stick 
 
 
 
+This is the specific gallery page not a gallery for a specific service gallery
 
+` strapi generate:api gallery galleryImage:media alt:text`
 
-
-
-Im not sure if this needs to be split out or not as I cant work out what I was doing and the whole point of graphQL is the documentation doesnt really show it
-
-I dont think it should be as its really part of the page and doesnt need much additional info on each piece. maybe alt tags for each image but I dont think those are going to get done maybe other than original name
-
-` strapi generate:api gallery galleryImage:media service:Relation`
+Each Image is individual as that gives Gatsby-image so things load as fast as possible
 
