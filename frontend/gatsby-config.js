@@ -48,6 +48,7 @@ module.exports = {
           `Slider-Twos`,
           `galleries`,
           `videos`,
+          `testimonials`,
           
           // Im getting this with pretty much everything
           // ERROR (node:3759) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated

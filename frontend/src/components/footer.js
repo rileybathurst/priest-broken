@@ -3,7 +3,7 @@ import React from "react"
 
 const Footer = () => (
     <footer>
-        <div className="bg-medium-gray">
+        <div className="bg-primary">
             <div className="footer-contact-areas">
 
                 <div className="footer-icons ">
@@ -69,7 +69,7 @@ const Footer = () => (
             </div>
         </div>
 
-        <div className="copyright bg-black">
+        <div className="copyright bg-secondary">
             <p className="text-center">
                 <b>&copy; <Link to="/" rel="home" className="hidden-link">Priest Sheet Metal &amp; Plate Christchurch 2020</Link></b>
             </p>

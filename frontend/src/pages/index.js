@@ -130,7 +130,7 @@ const IndexPage = ({ data }) => (
 
     </main>
 
-    <div className="bg-light-gray shadow-darker">
+    <section id="map" className="">{/* bg-primary shadow-darker */}
       <div className="grid-container">
         <div className="grid-x">
           <div className="cell gp2-tb">
@@ -140,7 +140,48 @@ const IndexPage = ({ data }) => (
           </div>
         </div> {/* .grid-x */}
       </div> {/* .grid-container */}
-    </div>
+    </section>
+
+
+
+
+    <section>
+      <div className="bg-light-gray">
+        <h3>Testimonials</h3>
+      </div>
+      
+      <div id="stars">
+        <div className="bg-light-gray">{/* stay gold */}</div>
+        <div className="bg-dark-gray">{/* stay gold */}</div>
+
+        <svg title="star-1" className="star-1" height="210" width="500">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+        </svg>
+        <svg title="star-2" className="star-2" height="210" width="500">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+        </svg>
+        <svg title="star-3" className="star-3" height="210" width="500">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+        </svg>
+        <svg title="star-4" className="star-4" height="210" width="500">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+        </svg>
+        <svg title="star-5" className="star-5" height="210" width="500">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+        </svg>
+
+
+      </div>
+
+      {data.allStrapiTestimonials.edges.map(document => (
+        <>
+        <div className="bg-dark-gray">
+          <p>{document.node.content}</p>{/* make this a quote */}
+          <p>{document.node.author}</p>
+          </div>
+        </>
+      ))}
+    </section>
 
   </Layout>
 )
@@ -200,6 +241,16 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+
+    allStrapiTestimonials {
+      edges {
+        node {
+          stars
+          content
+          author
         }
       }
     }
