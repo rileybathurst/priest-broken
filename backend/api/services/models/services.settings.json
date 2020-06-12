@@ -58,6 +58,9 @@
     },
     "order": {
       "type": "integer"
+    },
+    "byline": {
+      "type": "string"
     }
   }
 }

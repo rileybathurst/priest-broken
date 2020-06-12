@@ -24,7 +24,7 @@ more details are defintley possible through the visual interface
 
 I dont understand much about which relations cause things to be null vs which are empty - this is probably why I was having problems with booleans but that seems like the most likely to always have a spot
 
-` strapi generate:api services title:text content:text cover:media slug:string gallery:media hasGallery:integer coverMedium:string coverVideo:string hasVideo:integer video:relation order:integer` 
+` strapi generate:api services title:string byline:string content:text cover:media slug:string gallery:media hasGallery:integer coverMedium:string coverVideo:string hasVideo:integer video:relation order:integer` 
 
 `strapi generate:api sliderOne title:string sliderOneImage:media`
 

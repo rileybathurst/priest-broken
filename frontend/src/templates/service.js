@@ -131,15 +131,16 @@ const ArticleTemplate = ({ data }) => (
         }}
         className="service-info">
           <h2 className="wp-block-colum">{data.strapiService.title}</h2>
-          <p className="wp-block-colum">{data.strapiService.Content}</p>
+          <div className="wp-block-colum">
+            <h3>{data.strapiService.byline}</h3>
+            <p>{data.strapiService.Content}</p>
+          </div>
         </div>
         {/* title and content area close */}
 
 
         {data.strapiService.videos.map(vids => <>
-        one
           <Sec hasVideo={data.strapiService.hasVideo} />
-        two
 
           <div className="wp-block-media-text">
             <figure className="wp-block-media-text__media">
@@ -191,6 +192,7 @@ export const query = graphql`
     strapiService(id: {eq: $id}) {
       title
       Content
+      byline
       coverMedium
       Cover {
         childImageSharp {
@@ -217,35 +219,3 @@ export const query = graphql`
     }
   }
 `
-
-
-/* query ArticleTemplate($id: String!) {
-  strapiService(id: {eq: $id}) {
-    Title
-    Content
-    Cover {
-      childImageSharp {
-        fluid(maxWidth: 960) {
-          ...GatsbyImageSharpFluid
-        }
-        fixed {
-          src
-        }
-      }
-    }
-    Gallery {
-      name
-      url
-    }
-    id
-    nn
-    medium
-    CoverVideo
-    videos {
-      title
-      content
-      vimeo
-    }
-    hasVideo
-  }
-} */

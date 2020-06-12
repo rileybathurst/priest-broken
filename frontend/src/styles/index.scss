@@ -559,7 +559,7 @@ footer {
 	display: grid;
 	// grid-template-columns: 1;
 	// grid-template-rows: 1;
-	background: $secondary-color;
+	// background: $secondary-color; // this adds a color below the image if its smaller than the text field
 }
 
 .service-grid img, .service-grid h4 {
@@ -1741,6 +1741,12 @@ button {
 		text-decoration: none;
     }
 
+}
+
+.services-text {
+	h5 {
+		margin-top: 0.75rem; // we already have 1rem padding so this is more in line
+	}
 }
 
 /* .blocks-gallery-grid {

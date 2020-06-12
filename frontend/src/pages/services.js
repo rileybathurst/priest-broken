@@ -7,6 +7,15 @@ import HeaderContact from "../components/headercontact"
 import Seo from "../components/seo"
 import Img from 'gatsby-image'
 
+function Byline(props) {
+  if (props.byline) {
+    // console.log('byline');
+    return <h5>{props.byline}</h5>
+  } else {
+    return null
+  }
+}
+
 const ServicesPage = ({ data }) => (
   <Layout>
     <Seo title ="Services - Priest Sheet Metal &amp; Plate Christchurch" />
@@ -33,7 +42,8 @@ const ServicesPage = ({ data }) => (
             </div>
 
             <div className="gp-4">
-              {document.node.Content}
+              <Byline byline={document.node.byline} />
+              <p>{document.node.Content}</p>
             </div>
 
             <Link to={`/services/${document.node.slug}`}>
@@ -64,6 +74,7 @@ export const pageQuery = graphql`
           id
           title
           Content
+          byline
           Cover {
             childImageSharp {
               fluid(maxWidth: 960) {

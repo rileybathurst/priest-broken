@@ -3,6 +3,15 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 
+function Byline(props) {
+  if (props.byline) {
+    // console.log('byline');
+    return <h5>{props.byline}</h5>
+  } else {
+    return null
+  }
+}
+
 const IndexPage = ({ data }) => (
   <Layout>
     <main className="container">
@@ -115,7 +124,8 @@ const IndexPage = ({ data }) => (
                 </h4>
 
               <div className="gp-4">
-                {document.node.Content}
+                <Byline byline={document.node.byline} />
+                <p>{document.node.Content}</p>
               </div>
 
               <Link to={`/services/${document.node.slug}`}>
@@ -199,6 +209,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          byline
           Content
           Cover {
             childImageSharp {

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "name": "testimonials",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "stars": {
+      "type": "integer"
+    }
+  }
+}
