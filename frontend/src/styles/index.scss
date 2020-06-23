@@ -1,3 +1,5 @@
+
+
 /* Contents
 -------------------------------------------------------------- */
 
@@ -60,6 +62,9 @@ $header-font-family: 'Roboto Slab', serif;
 
 $page-width: 77em;
 
+// this is a messy place to have this but until I get everything sorted it's here for now
+@import 'molecules';
+
 /* Reset */
 body {
     margin: 0; // browser reset
@@ -107,7 +112,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1 {
-	margin-top: 0;
+	margin-top: 0; // why am I crushing this in all situations
 	font-size: 2.488em;
 }
 
@@ -265,7 +270,7 @@ white-a:hover {
 	Used around the page for readability styling
 -------------------------------------------------------------- */
 
-.ngm-top {
+.ngm-top { // negative global margin
 	margin-top: -$global-margin;
 }
 

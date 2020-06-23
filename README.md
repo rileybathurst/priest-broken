@@ -89,3 +89,14 @@ this needs more documentation
 
 - Other services link at the bottom of each service page
 - add a nice quote mark to the testimonials
+- There are some really old class names from Foundation which I haven't used for years so just check into if they are the best ways
+- can I compress the vimeo player script?
+- Divide the scss to atomic design and rebuild the patternlab with the new things
+
+
+
+## Naming
+
+I need some new hero name 
+
+I've renamed the old her to summit which is the light grey are at the top of the page mainly on the front page
