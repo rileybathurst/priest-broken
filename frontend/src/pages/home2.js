@@ -15,15 +15,17 @@ function Byline(props) {
 
 const HomePage = ({ data }) => (
   <Layout>
-      <div className="summit__backer">
+      <div className="summit__backer shadow">
 
-        <div className="summit__backer--image">
-          <SummitImage />
-            {/*
-            Im not sure if I can do this with a single Image for small or if I need another one in the next grid down or can I place this in the right spot?
-            for now I'll probably just do two seperate.
-             */}
-        </div>
+        {/* <div className="summit__backer--image--shadow"> */}
+          <div className="summit__backer--image">
+            <SummitImage />
+              {/*
+              Im not sure if I can do this with a single Image for small or if I need another one in the next grid down or can I place this in the right spot?
+              for now I'll probably just do two seperate.
+              */}
+          </div>
+        {/* </div> */}
 
         <section id="summit">
 
@@ -37,12 +39,12 @@ const HomePage = ({ data }) => (
                 <p>Priest Sheetmetal &amp; Plate Ltd is a family run business that has operated out of our 10 Barbour St address in Waltham, Christchurch for over 63 years. Let our experience guide you from design, manufacture, to assembly and installation of your fabrication project.</p>
                 
                 {/* small svg on top and bottom */}
-                <svg title="summit__about__color--top" className="summit__about__color--top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12">
+                <svg title="summit__about__color--top" className="summit__about__color--top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none">
                     <polygon fill="#D1D1D1" points="0,12 100,0 100,12"/>
                     {/* medium-gray fill */}
                 </svg>
 
-                <svg title="summit__about__color--bottom" className="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12">
+                <svg title="summit__about__color--bottom" className="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none">
                     <polygon fill="#D1D1D1" points="0,0 100,0 0,12"/>
                 </svg>
 
@@ -69,14 +71,17 @@ const HomePage = ({ data }) => (
                     left:'0',
                     width:'100%',
                     height:'100%',
-                    clipPath: 'polygon(32px 0%, 100% 0%, calc(100% - 32px) 100%, 0% 100%)'
                     // https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
                     // guess and check on the numbers
-                }} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                }} frameborder="0" allow="autoplay; fullscreen" allowfullscreen className="shadow"></iframe>
                 {/* this will feel better with the box below once it gets the image behind */}
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>
             {/* can this be compressed moved to the footer? */}
+            
+            <div className="summit__videobacker">
+              <SummitImage /> {/* this is a secondary version of the image until I figure out some magic */}
+            </div>
 
             <div className="summit__contact">
 
@@ -126,21 +131,25 @@ const HomePage = ({ data }) => (
                 </Link>
             </h4>
             
-            <div className="tasks__background--upper">{/* stay gold */}</div>
+            <div className="tasks__background--upper shadow">{/* stay gold */}</div>
 
-            <Link to={`/services/${document.node.slug}`} className="tasks__image">
+            <Link to={`/services/${document.node.slug}`} className="tasks__image shadow">
                 <Img fluid={document.node.Cover.childImageSharp.fluid}  className="shadow"/>
                 {/* alt={document.node.title} */}
             </Link>
+
+            <div className="tasks__background--lower shadow">{/* stay gold */}</div>
 
             <div className="tasks__info">
                 <Byline byline={document.node.byline} />
                 <p>{document.node.Content}</p>
                 <Link to={`/services/${document.node.slug}`}    className="tasks__more">
-                    <span className="gm-3 button hollow">More about {document.node.title}</span>
+                    <span className="button hollow">More about {document.node.title}</span>
                 </Link>
             </div>
 
+            <hr className="tasks__divider" />
+            <div className="tasks__divider--cross">{/* stay gold */}</div>
 
         </section>
       ))}

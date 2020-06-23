@@ -2279,7 +2279,7 @@ ad = 4
 	animation-iteration-count: infinite;
 
 	background: $medium-gray;
-	width: 100%;
+	width: calc(100% - 2rem);
 }
 
 /* Just do the link I dont understand the math */
