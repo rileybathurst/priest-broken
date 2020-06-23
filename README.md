@@ -100,3 +100,9 @@ this needs more documentation
 I need some new hero name 
 
 I've renamed the old her to summit which is the light grey are at the top of the page mainly on the front page
+
+
+
+## Layout
+
+Is it going to be possible to line up all the angles or does that matter if it just looks nice
