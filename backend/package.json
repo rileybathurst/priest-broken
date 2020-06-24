@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "gatsby-cli": "^2.12.50",
     "knex": "<0.20.0",
     "sqlite3": "latest",
     "strapi": "3.0.1",
