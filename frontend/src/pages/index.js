@@ -3,6 +3,8 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import SummitImage from '../components/summit-image'
+import TeamPhoto1 from '../components/teamphoto1'
+import TeamPhoto2 from '../components/teamphoto2'
 
 function Byline(props) {
   if (props.byline) {
@@ -83,6 +85,20 @@ const HomePage = ({ data }) => (
               <SummitImage /> {/* this is a secondary version of the image until I figure out some magic */}
             </div>
 
+            <div className="summit__videobacker--color">{/* stay gold */}</div>
+
+
+            {/* Im not sure if I can do this without multiloading images but seems like it should be possible if not tricky */}
+            <div className="summit__team-photo_1"><TeamPhoto1 /></div>
+            <div className="summit__team-photo_2"><TeamPhoto2 /></div>
+
+
+
+
+
+
+
+
             <div className="summit__contact">
 
                 <div className="summit__contact--service summit__contact--phone"> {/* do I need phone? */}
@@ -99,8 +115,8 @@ const HomePage = ({ data }) => (
 {/*                     <svg title="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25">
                         <polygon fill="none" stroke="black" stroke-width="2" stroke-linecap="round" points="12,0 100,0 88,25 0,25"/>
                     </svg> */}
-                    <div className="summit-contact--skew">{/* stay gold */}</div>
-                    <div className="summit-contact--skew__border">{/* stay gold */}</div>
+                    <div className="summit-contact--skew shadow">{/* stay gold */}</div>
+                    {/* <div className="summit-contact--skew__border"> stay gold </div> */}
                 </div>
             
                 <div className="summit__contact--service summit__contact--email">
@@ -112,7 +128,7 @@ const HomePage = ({ data }) => (
                         Find us at&nbsp;<span className="header-contact--text__underline">10 Barbour Street, Christchurch</span>
                     </a>
                     <div className="summit-contact--skew">{/* stay gold */}</div>
-                    <div className="summit-contact--skew__border">{/* stay gold */}</div>
+                    {/* <div className="summit-contact--skew__border"> stay gold </div> */}
                 </div>{/* summit__contact--email */}
                 
             </div>{/* summit__contact */}

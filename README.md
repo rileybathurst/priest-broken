@@ -106,3 +106,26 @@ I've renamed the old her to summit which is the light grey are at the top of the
 ## Layout
 
 Is it going to be possible to line up all the angles or does that matter if it just looks nice
+
+
+
+16px = 1em
+
+https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide
+
+desktop size
+
+MacBook Air
+
+**2560 x 1600** @ 227 ppi
+
+= 160em
+
+Scaled
+
+- 1680 by 1050 									
+- 1440 by 900 									
+- 1024 by 640
+
+16:10 aspect ratio
+
