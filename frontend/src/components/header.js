@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
         </ul>
       </nav>
 
-      <div id="menu_toggle" className="hide-for-medium bg-secondary shadow-darker text-center">
+      <div id="menu_toggle" className="bg-secondary shadow-darker text-center">
         <SmallMenu />
       </div>
 

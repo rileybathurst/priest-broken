@@ -33,13 +33,26 @@
 	}
 } */
 
-$breakpoints: (
+// orginal foundation
+/* $breakpoints: (
   small: 0,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+); */
+
+// custom priest
+// https://docs.google.com/spreadsheets/d/1mmnTlSNv-L8dyHRb33eE_pM3qVv-a5hz3q9WfTDlI4c/edit#gid=0
+$breakpoints: (
+	small: 0,
+	medium: 40em, // 640px
+	medium__half-step: 54em, // 864px minor change 
+	large: 80em, // 1280px
+	large__half-step: 105em, // 1680px minor change 
+	full: 144em, // 2304px
 );
+
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large); // should this not include all the way to xx if I have it above?
 
@@ -61,6 +74,7 @@ $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $header-font-family: 'Roboto Slab', serif;
 
 $page-width: 77em;
+$general-measure: 30rem;
 
 // this is a messy place to have this but until I get everything sorted it's here for now
 @import 'molecules';
@@ -546,7 +560,7 @@ footer {
 	border-radius: 5px;
 
 	@media (min-width: map-get($breakpoints, medium)) {
-		max-width: 33%;
+		max-width: $general-measure;
 		padding-bottom: $global-padding*3;
 	}
 }
@@ -1556,7 +1570,9 @@ button {
 
   display: grid;
 
-
+  @media (min-width: map-get($breakpoints, medium)) {
+	display: none;
+  }
 }
 
 .menu-small > ul {
@@ -1654,6 +1670,8 @@ button {
   transition: 2s ease; // the slide in on load is kinda nice but maybe overkill
   // background: tomato;
   cursor: pointer; // match the link
+
+  display: grid;
 }
 
 .small_menu--icon span {
@@ -1678,12 +1696,22 @@ button {
 
 .active ~ #menu_toggle > .small_menu--icon > .small_menu--icon-topline {
   transform: rotate(45deg);
-  top: 0.35rem;
+//   top: 0.35rem; // guess and check
+	grid-row: 1;
+	grid-column: 1;
+	align-self: center;
+	justify-self: center;
+	margin: 0;
 }
 
 .active ~ #menu_toggle > .small_menu--icon > .small_menu--icon-bottomline {
   transform: rotate(-45deg);
-  top: -0.35rem;
+//   top: -0.35rem;
+	grid-row: 1;
+	grid-column: 1;
+	align-self: center;
+	justify-self: center;
+	margin: 0;
 }
 
 
@@ -2217,7 +2245,7 @@ align-self: end;
 }
 
 #quoted {
-	max-width: 75rem;
+	max-width: $general-measure;
 	margin: 0 auto;
 	padding: $global-padding;
 

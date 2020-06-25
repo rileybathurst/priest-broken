@@ -17,17 +17,6 @@ function Byline(props) {
 
 const HomePage = ({ data }) => (
   <Layout>
-      <div className="summit__backer shadow">
-
-        {/* <div className="summit__backer--image--shadow"> */}
-          <div className="summit__backer--image">
-            <SummitImage />
-              {/*
-              Im not sure if I can do this with a single Image for small or if I need another one in the next grid down or can I place this in the right spot?
-              for now I'll probably just do two seperate.
-              */}
-          </div>
-        {/* </div> */}
 
         <section id="summit">
 
@@ -92,13 +81,6 @@ const HomePage = ({ data }) => (
             <div className="summit__team-photo_1"><TeamPhoto1 /></div>
             <div className="summit__team-photo_2"><TeamPhoto2 /></div>
 
-
-
-
-
-
-
-
             <div className="summit__contact">
 
                 <div className="summit__contact--service summit__contact--phone"> {/* do I need phone? */}
@@ -134,13 +116,13 @@ const HomePage = ({ data }) => (
             </div>{/* summit__contact */}
 
         </section>
-      </div>{/* .summit__backer */}
 {/*
       This cant be outside as I want the image
 <svg title="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12">
           <polygon fill="#e6e6e6" points="0,0 100,0 0,12"/>
       </svg> */}
 
+      <div className="tasks__wrapper">
       {data.allStrapiService.edges.map(document => (
         <section className="tasks">
             <h4 className="tasks__title">
@@ -171,6 +153,7 @@ const HomePage = ({ data }) => (
 
         </section>
       ))}
+      </div>{/* tasks__wrapper */}
 
     <section id="map" className="">{/* bg-primary shadow-darker */}
       <div className="grid-container">
