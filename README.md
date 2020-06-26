@@ -97,15 +97,17 @@ this needs more documentation
 
 ## Naming
 
-I need some new hero name 
+Summit is the new naming for hero.
 
-I've renamed the old her to summit which is the light grey are at the top of the page mainly on the front page
+As I currently have both I can go back to hero once the original design is completly deprecated
 
 
 
 ## Layout
 
 [Math for sizes](https://docs.google.com/spreadsheets/d/1mmnTlSNv-L8dyHRb33eE_pM3qVv-a5hz3q9WfTDlI4c/edit#gid=0)
+
+I think these might need to be a little bigger for more spacing
 
 | small             |      |                           |
 | ----------------- | ---- | ------------------------- |
@@ -114,9 +116,3 @@ I've renamed the old her to summit which is the light grey are at the top of the
 | large             | 80   |                           |
 | large__half-step  | 105  | minor change              |
 | full              | 144  | start floating everything |
-
-
-
-
-
-Summit__about is really messy I think Im just going to pull out all the svg and use clip paths

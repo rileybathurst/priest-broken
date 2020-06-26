@@ -18,6 +18,9 @@ function Byline(props) {
 const HomePage = ({ data }) => (
   <Layout>
 
+        {/* <div className="summit__wrapper"> */}
+        <div className="summit__backer">
+        
         <section id="summit">
 
             <div className="summit__info"> {/* this has old naming and needs to be checked */}
@@ -50,11 +53,11 @@ const HomePage = ({ data }) => (
             <script src="https://player.vimeo.com/api/player.js"></script>
             {/* can this be compressed moved to the footer? */}
             
-            <div className="summit__videobacker">
+            <div className="summit__videobacker hide-for-full">
               <SummitImage /> {/* this is a secondary version of the image until I figure out some magic */}
             </div>
 
-            <div className="summit__videobacker--color">{/* stay gold */}</div>
+            <div className="summit__videobacker--color hide-for-full">{/* stay gold */}</div>
 
 
             {/* Im not sure if I can do this without multiloading images but seems like it should be possible if not tricky */}
@@ -71,7 +74,7 @@ const HomePage = ({ data }) => (
                     </a>
 
                     <a href="tel:033669818" className="summit__contact--text">
-                        Call us today to discuss your project:&nbsp;<span className="summit__contact--text__underline">366 9818</span>
+                        Call us today to discuss your project 366 9818
                     </a>
                     {/* purposley not using a <p> tag so I don't have the margins and this isn't really a paragraph */}
 {/*                     <svg title="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25">
@@ -87,7 +90,7 @@ const HomePage = ({ data }) => (
                     </a>
 
                     <a href="https://goo.gl/maps/EzF5epUkFxaEihtLA" className="summit__contact--text">
-                        Find us at&nbsp;<span className="header-contact--text__underline">10 Barbour Street, Christchurch</span>
+                        Find us at 10 Barbour Street, Christchurch
                     </a>
                     <div className="summit-contact--skew">{/* stay gold */}</div>
                     {/* <div className="summit-contact--skew__border"> stay gold </div> */}
@@ -96,6 +99,16 @@ const HomePage = ({ data }) => (
             </div>{/* summit__contact */}
 
         </section>
+
+
+        <div className="summit__videobacker show-for-full">
+              <SummitImage /> {/* this is a secondary version of the image until I figure out some magic */}
+            </div>
+
+            <div className="summit__videobacker--color show-for-full">{/* stay gold */}</div>
+
+
+        </div>{/* .summit__wrapper */}
 {/*
       This cant be outside as I want the image
 <svg title="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12">

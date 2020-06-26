@@ -48,9 +48,11 @@ $breakpoints: (
 	small: 0,
 	medium: 40em, // 640px
 	medium__half-step: 54em, // 864px minor change 
-	large: 80em, // 1280px
-	large__half-step: 105em, // 1680px minor change 
-	full: 144em, // 2304px
+	large: 90em, // 1440px // Im getting the feeling this is too small
+	large__half-step: 120em, // 1920px minor change 
+	full: 144em, // 2304px // this could just be large__half-step 
+	// Im doing quite a lot of work to get this to be different and nice
+	// but that would have to be there anyway
 );
 
 $print-breakpoint: large;
@@ -556,12 +558,13 @@ footer {
 	// max-width: 33%;
 	max-width: 50%;
 	margin: $global-margin auto;
-	padding: $global-padding*2; // start doing more with a type scale and vertical rythm
+	padding: $global-padding; // start doing more with a type scale and vertical rythm
 	border-radius: 5px;
 
 	@media (min-width: map-get($breakpoints, medium)) {
 		max-width: $general-measure;
-		padding-bottom: $global-padding*3;
+		margin-top: $global-margin*2;
+		margin-bottom: $global-margin*2;
 	}
 }
 
@@ -1539,6 +1542,19 @@ button {
 .show-for-large {
 	display: none;
 	@media (min-width: map-get($breakpoints, large)) {
+		display: block; // not sure if this is exactly right
+	}
+}
+
+.hide-for-full {
+	@media (min-width: map-get($breakpoints, full)) {
+		display: none !important;
+	}
+}
+
+.show-for-full {
+	display: none;
+	@media (min-width: map-get($breakpoints, full)) {
 		display: block; // not sure if this is exactly right
 	}
 }
