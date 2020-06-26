@@ -28,26 +28,6 @@ const HomePage = ({ data }) => (
             <div className="summit__about">
                 <h2>We're Experienced Sheetmetal Engineers.</h2>
                 <p>Priest Sheetmetal &amp; Plate Ltd is a family run business that has operated out of our 10 Barbour St address in Waltham, Christchurch for over 63 years. Let our experience guide you from design, manufacture, to assembly and installation of your fabrication project.</p>
-                
-                {/* small svg on top and bottom */}
-                <svg title="summit__about__color--top" className="summit__about__color--top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none">
-                    <polygon fill="#D1D1D1" points="0,12 100,0 100,12"/>
-                    {/* medium-gray fill */}
-                </svg>
-
-                <svg title="summit__about__color--bottom" className="summit__about__color--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none">
-                    <polygon fill="#D1D1D1" points="0,0 100,0 0,12"/>
-                </svg>
-
-                {/* large svg on left and right */}
-                <svg title="summit__about__color--left" className="summit__about__color--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 100" preserveAspectRatio="none"> {/* guess and check numbers but this is quite right they should stretch to fill */}
-                    <polygon fill="#D1D1D1" points="12,0 12,100 0,100"/>
-                    {/* medium-gray fill */}
-                </svg>
-
-                <svg title="summit__about__color--right" className="summit__about__color--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 100" preserveAspectRatio="none">
-                    <polygon fill="#D1D1D1" points="0,0 0,100 12,0"/>
-                </svg>
             </div>
 
             {/* Summit Videos */}

@@ -119,3 +119,4 @@ I've renamed the old her to summit which is the light grey are at the top of the
 
 
 
+Summit__about is really messy I think Im just going to pull out all the svg and use clip paths
