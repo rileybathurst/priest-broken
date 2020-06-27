@@ -1,4 +1,4 @@
-// There might be a better way to do this but its the best I could do at the time of building
+// this was something that was worked on quickly but not implemented so should not go live in the site
 
 import React from "react"
 import Layout from "../components/layout"

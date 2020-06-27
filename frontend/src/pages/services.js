@@ -19,40 +19,43 @@ function Byline(props) {
 const ServicesPage = ({ data }) => (
   <Layout>
     <Seo title ="Services - Priest Sheet Metal &amp; Plate Christchurch" />
+
     <HeaderContact />
 
     <main className="container">
 
+    <div className="tasks__wrapper">
       {data.allStrapiService.edges.map(document => (
-        <section className="service">
-          <div className="service-grid img-100">
-            <Link to={`/services/${document.node.slug}`}>
-              <Img fluid={document.node.Cover.childImageSharp.fluid} alt={document.node.title} className="shadow"/>
-            </Link>
-          </div>
-
-          <div className="services-text bg-light-gray shadow">
-
-            <div className="bg-secondary">
-              <h4 className="services-title">
-                  <Link to={`/services/${document.node.slug}`}>
+        <section className="tasks">
+            <h4 className="tasks__title">
+                <Link to={`/services/${document.node.slug}`}>
                     {document.node.title}
-                  </Link>
-              </h4>
-            </div>
+                </Link>
+            </h4>
+            
+            <div className="tasks__background--upper shadow">{/* stay gold */}</div>
 
-            <div className="gp-4">
-              <Byline byline={document.node.byline} />
-              <p>{document.node.Content}</p>
-            </div>
-
-            <Link to={`/services/${document.node.slug}`}>
-              <span className="gm-3 button hollow">More about {document.node.title}</span>
+            <Link to={`/services/${document.node.slug}`} className="tasks__image shadow">
+                <Img fluid={document.node.Cover.childImageSharp.fluid}  className="shadow"/>
+                {/* alt={document.node.title} */}
             </Link>
 
-          </div>
+            <div className="tasks__background--lower shadow">{/* stay gold */}</div>
+
+            <div className="tasks__info">
+                <Byline byline={document.node.byline} />
+                <p>{document.node.Content}</p>
+                <Link to={`/services/${document.node.slug}`}    className="tasks__more">
+                    <span className="button hollow">More about {document.node.title}</span>
+                </Link>
+            </div>
+
+            <hr className="tasks__divider" />
+            <div className="tasks__divider--cross">{/* stay gold */}</div>
+
         </section>
       ))}
+      </div>{/* tasks__wrapper */}
 
     </main>
 
