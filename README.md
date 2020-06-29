@@ -92,6 +92,7 @@ this needs more documentation
 - There are some really old class names from Foundation which I haven't used for years so just check into if they are the best ways
 - can I compress the vimeo player script?
 - Divide the scss to atomic design and rebuild the patternlab with the new things
+- I should be able to remove the logo from the src/images but need to be checked
 
 
 
