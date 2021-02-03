@@ -62,7 +62,7 @@ this needs more documentation
 
 ``` git init ```
 
-``` git remote add dreamhost ssh://rilbat2@sumter.dreamhost.com/~/priest.rileybathurst.com ```
+``` git remote add dreamhost ssh://rilbat2@sumter.dreamhost.com/~/priest.rileybathurst.com.git ```
 
 ``` git add * -f ```
 
