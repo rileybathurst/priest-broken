@@ -9,24 +9,25 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+
+  },
   "dependencies": {
     "gatsby-cli": "^2.12.50",
     "knex": "<0.20.0",
     "sqlite3": "latest",
-    "strapi": "3.0.1",
-    "strapi-admin": "3.0.1",
-    "strapi-connector-bookshelf": "3.0.1",
-    "strapi-plugin-content-manager": "3.0.1",
-    "strapi-plugin-content-type-builder": "3.0.1",
-    "strapi-plugin-email": "3.0.1",
-    "strapi-plugin-graphql": "3.0.1",
-    "strapi-plugin-upload": "3.0.1",
-    "strapi-plugin-users-permissions": "3.0.1",
-    "strapi-utils": "3.0.1"
+    "strapi": "3.4.6",
+    "strapi-admin": "3.4.6",
+    "strapi-connector-bookshelf": "3.4.6",
+    "strapi-plugin-content-manager": "3.4.6",
+    "strapi-plugin-content-type-builder": "3.4.6",
+    "strapi-plugin-email": "3.4.6",
+    "strapi-plugin-upload": "3.4.6",
+    "strapi-plugin-users-permissions": "3.4.6",
+    "strapi-utils": "3.4.6"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Riley Bathurst"
   },
   "strapi": {
     "uuid": "a97d0e81-4d13-41a4-ace3-1680d31540db"
